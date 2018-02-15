@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Золотарь</string>
+    <string name="menu_item_profile">Профиль</string>
+    <string name="menu_item_options">Настройки</string>
+    <string name="menu_item_update">Обновления</string>
+
+    <string name="str_debug1">Главное окно</string>
+    <string name="str_debug2">Второе окно</string>
+    <string name="str_debug3">Третье окно</string>
+
+    <string name="str_hint_name">Ваше имя</string>
+    <string name="str_hint_adress">Ваш адрес</string>
+    <string name="str_hint_district">Район проживания</string>
+    <string name="str_hint_phone">Ваш телефон для связи</string>
+    <string name="str_hint_takecare">Следующие данные будут передаваться исполнителю Вашего заказа:</string>
+    <string name="str_hint_common">Следующие данные будут использованы для составления Вашего заказа:</string>
+    <string name="str_bt_confirm">Подтвердить</string>
+    <string name="str_bt_gps">Указать на карте</string>
+
+
+</resources>
