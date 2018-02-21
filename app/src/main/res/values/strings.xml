@@ -14,8 +14,21 @@
     <string name="str_hint_phone">Ваш телефон для связи</string>
     <string name="str_hint_takecare">Следующие данные будут передаваться исполнителю Вашего заказа:</string>
     <string name="str_hint_common">Следующие данные будут использованы для составления Вашего заказа:</string>
+    <string name="str_hint_obj_name">Наименование</string>
+    <string name="str_hint_obj_adress">Адрес</string>
+    <string name="str_hint_obj_to_point">Расстояние от подъезда до емкости</string>
+    <string name="str_hint_obj_volume">Объем емкости</string>
+    <string name="str_obj_title_new">Ввод нового объекта</string>
+    <string name="str_obj_title_edit">Исправление информации по объекту</string>
+    <string name="str_hint_obj_district">Район расположения</string>
+
     <string name="str_bt_confirm">Подтвердить</string>
-    <string name="str_bt_gps">Указать на карте</string>
+    <string name="str_bt_cancel">Отмена</string>
+    <string name="str_bt_gps">GPS</string>
+    <string name="str_bt_obj_add">Добавить объект</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

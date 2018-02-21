@@ -16,6 +16,7 @@ public class MainClient1Activity extends AppCompatActivity implements View.OnCli
 
     int requestCode;
     TextView tv_user_settings;
+
     String textUserSettings="";
     StringBuilder stringBuilder = new StringBuilder(textUserSettings);
 
@@ -69,6 +70,7 @@ public class MainClient1Activity extends AppCompatActivity implements View.OnCli
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (resultCode){
             case RESULT_OK:
+                user_pref = getPreferences(MODE_PRIVATE);
                 SharedPreferences.Editor ed = user_pref.edit();
                 ed.putString("name",data.getStringExtra("name"));
                 ed.putString("district",data.getStringExtra("district"));
@@ -91,6 +93,7 @@ public class MainClient1Activity extends AppCompatActivity implements View.OnCli
 
     public void setTextUserGreetings(){
         user_pref = getPreferences(MODE_PRIVATE);
+        tv_user_settings.setText("");
         stringBuilder.append("Здравствуйте, "+user_pref.getString("name","Незнакомец")+"!");
         stringBuilder.append("/n"+"Район: "+user_pref.getString("district","Незнакомец")+"!");
         stringBuilder.append("/n"+"Адрес: "+user_pref.getString("adress","Незнакомец")+"!");
@@ -98,7 +101,7 @@ public class MainClient1Activity extends AppCompatActivity implements View.OnCli
         stringBuilder.append("/n"+"GPS-lat: "+user_pref.getString("gps_lat","Незнакомец")+"!");
         stringBuilder.append("/n"+"GPS-long: "+user_pref.getString("gps_long","Незнакомец")+"!");
 
-        tv_user_settings.setText(stringBuilder.toString());
+        tv_user_settings.setText(stringBuilder.toString().split("/n").toString());
     }
 
 }

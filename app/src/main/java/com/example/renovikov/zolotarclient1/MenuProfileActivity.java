@@ -22,12 +22,11 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MenuProfileActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText til_name;
-    EditText til_adress;
-    EditText til_district;
     EditText til_phone;
 
     private LocationManager locationManager;
@@ -44,8 +43,7 @@ public class MenuProfileActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_menu_profile);
 
         til_name = (EditText) findViewById(R.id.TIL_name);
-        til_adress = (EditText) findViewById(R.id.TIL_adress);
-        til_district = (EditText) findViewById(R.id.TIL_district);
+
         til_phone = (EditText) findViewById(R.id.TIL_phone);
 
         AppCompatButton bt_confirm = (AppCompatButton) findViewById(R.id.bt_confirm);
@@ -66,8 +64,8 @@ public class MenuProfileActivity extends AppCompatActivity implements View.OnCli
             case R.id.bt_confirm:
                 //передаем введеные значения и закрываемся
                 intent.putExtra("name",til_name.getText());
-                intent.putExtra("adress",til_adress.getText());
-                intent.putExtra("district",til_district.getText());
+            //    intent.putExtra("adress",til_adress.getText());
+            //    intent.putExtra("district",til_district.getText());
                 intent.putExtra("phone",til_phone.getText());
                 setResult(RESULT_OK,intent);
                 finish();
@@ -77,14 +75,16 @@ public class MenuProfileActivity extends AppCompatActivity implements View.OnCli
                 //получаем координаты
                 //геокодируем
                 //преобразовать в строку и положить в поле
-                Geocoder gCoder = new Geocoder(this);
+           /*     Geocoder gCoder = new Geocoder(this);
                 try {
-                     til_adress.setText(gCoder.getFromLocation(lat, lot, 1).toString());
+                    til_adress.setText(gCoder.getFromLocation(lat, lot, 1).toString());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 intent.putExtra("latitude",lat);
-                intent.putExtra("longitude",lot);
+                intent.putExtra("longitude",lot);*/
+            case R.id.bt_obj_add:
+                //вызываем фрагмент с функцией добавления
             default:
                 setResult(RESULT_CANCELED,intent);
         }
@@ -158,4 +158,19 @@ public class MenuProfileActivity extends AppCompatActivity implements View.OnCli
 //                tvStatusNet.setText("Status: " + String.valueOf(status));
             }
         };
+
+    private String GetAdressFromCoords(int latitude, int longitude){
+        Geocoder gCoder = new Geocoder(this);
+        List laddr;
+        String saddr = "";
+
+        try {
+            laddr = gCoder.getFromLocation(lat, lot, 1);
+            saddr = (String) laddr.get(0);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return saddr;
+    }
 }

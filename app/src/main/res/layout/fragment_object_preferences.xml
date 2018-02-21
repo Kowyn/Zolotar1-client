@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.renovikov.zolotarclient1.ObjectPreferencesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_obj_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_obj_title_new"
+            />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/OBJ_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/str_hint_obj_name"
+                android:inputType="textPersonName"
+                android:maxLength="20" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/OBJ_district"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/str_hint_obj_district"
+                 />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="2">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/OBJ_adress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="true"
+                    android:hint="@string/str_hint_obj_adress"
+                    android:inputType="textPersonName"
+                    android:maxLength="20" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/fr_bt_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/str_bt_gps" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_obj_to_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tv_obj_to_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_hint_obj_to_point" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_obj_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tv_obj_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_hint_obj_volume" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fr_bt_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/str_bt_confirm" />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/fr_bt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_bt_cancel" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
